@@ -1,0 +1,13 @@
+def sockMerchant(n, ar):
+    dictionary = {}
+    for i in range(n):
+        if ar[i] in dictionary:
+            dictionary[ar[i]] += 1
+        else:
+            dictionary[ar[i]] = 1
+    total = 0
+    for key in dictionary:
+        if dictionary[key] % 2 == 1:
+            total += 1 
+    print(total)        
+    return total
