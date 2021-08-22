@@ -1,0 +1,20 @@
+def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
+        i = 0
+        dictionary = {}
+        x = []
+        final = [] 
+        for val in arr1:
+            if val in dictionary and arr2:
+                dictionary[val] += 1
+            elif val not in arr2:
+                x.append(val)
+            else:
+                dictionary[val] = 1
+        
+        for val in arr2:
+            while (dictionary[val] > 0):
+                final.append(val)
+                dictionary[val] -= 1
+        x.sort()
+        final += x
+        return final
