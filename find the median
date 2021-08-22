@@ -1,0 +1,8 @@
+def findMedian(arr):
+    arr.sort()
+    length = len(arr)
+    mid = int(length/2)
+    if length % 2 == 0:
+        return (arr[mid] + arr[mid-1])/2
+    else:
+        return arr[mid]    
