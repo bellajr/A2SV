@@ -1,0 +1,11 @@
+def maximumToys(prices, k):
+    prices.sort()
+    price_sum = 0
+    i = 0 
+    for price in prices:
+        if price_sum + price > k:
+            break
+        else:
+            price_sum += price
+            i += 1 
+    return i 
